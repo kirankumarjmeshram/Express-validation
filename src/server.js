@@ -1,12 +1,14 @@
-const express = require("express");
+const express = require("express")
 
-const app = express();
+const app = require("./index");
 
-//module.export =app;
-
-// const app = require("./index");
 const connect = require("./config/db");
 
+const userController = require("./controllers/user.controller")
+
+app.use(express.json())
+
+app.use("users",userController)
 
 app.listen(2222,async (req,res)=>{
    try{
