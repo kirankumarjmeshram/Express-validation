@@ -8,7 +8,7 @@ const userController = require("./controllers/user.controller")
 
 app.use(express.json())
 
-app.use("users",userController)
+app.use("/users",userController)
 
 app.listen(2222,async (req,res)=>{
    try{
